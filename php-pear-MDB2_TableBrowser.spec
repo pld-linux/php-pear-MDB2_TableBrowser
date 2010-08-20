@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Database table abstraction library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka abstrakcji tabeli bazy danych
 Name:		php-pear-%{_pearname}
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	0c4cef7d0932b423760db71e77847fe1
+# Source0-md5:	88734e3c2185fb707667e711983940e2
 Patch0:		%{name}-paths.patch
 URL:		http://pear.php.net/package/MDB2_TableBrowser/
 BuildRequires:	php-pear-PEAR
