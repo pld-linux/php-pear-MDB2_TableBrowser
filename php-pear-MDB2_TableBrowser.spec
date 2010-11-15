@@ -1,18 +1,15 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		MDB2
-%define		_subclass	TableBrowser
 %define		_status		alpha
 %define		_pearname	MDB2_TableBrowser
 Summary:	%{_pearname} - Database table abstraction library
 Summary(pl.UTF-8):	%{_pearname} - biblioteka abstrakcji tabeli bazy danych
 Name:		php-pear-%{_pearname}
-Version:	0.1.1
+Version:	0.1.2
 Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	88734e3c2185fb707667e711983940e2
-Patch0:		%{name}-paths.patch
+# Source0-md5:	738fdba9d00476964905333a60223fba
 URL:		http://pear.php.net/package/MDB2_TableBrowser/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -56,7 +53,6 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -68,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log docs/MDB2_TableBrowser/Examples/example.php
+%doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/MDB2/TableBrowser
 %{php_pear_dir}/MDB2/TableBrowser.php
