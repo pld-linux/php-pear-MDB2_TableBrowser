@@ -1,0 +1,53 @@
+--- MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/Single.php~	2010-11-16 15:34:19.000000000 +0200
++++ MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/Single.php	2010-11-16 15:36:10.731923492 +0200
+@@ -12,13 +12,13 @@
+  * @version   SVN:<svn_id>
+  * @link      http://code.google.com/p/mdb2tablebrowser/source/browse/trunk/MDB2_TableBrowser/TableBrowser/DBException.php
+  */
+-require_once 'Interfaces.php';
+-require_once 'ParameterException.php';
+-require_once 'DBException.php';
+-require_once 'TableValidator.php';
+-require_once 'FilterManager.php';
+-require_once 'ColumnManager.php';
+-require_once 'MultipleFliterManager.php';
++require_once 'MDB2/TableBrowser/Interfaces.php';
++require_once 'MDB2/TableBrowser/ParameterException.php';
++require_once 'MDB2/TableBrowser/DBException.php';
++require_once 'MDB2/TableBrowser/TableValidator.php';
++require_once 'MDB2/TableBrowser/FilterManager.php';
++require_once 'MDB2/TableBrowser/ColumnManager.php';
++require_once 'MDB2/TableBrowser/MultipleFliterManager.php';
+ 
+ 
+ /**
+--- MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/FilterManager.php~	2010-11-16 15:36:47.000000000 +0200
++++ MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/FilterManager.php	2010-11-16 15:37:46.034316377 +0200
+@@ -13,9 +13,9 @@
+  * @link      http://code.google.com/p/mdb2tablebrowser/source/browse/trunk/MDB2_TableBrowser/TableBrowser/FilterManager.php
+  */
+ 
+-require_once 'Interfaces.php';
++require_once 'MDB2/TableBrowser/Interfaces.php';
+ require_once 'MDB2.php';
+-require_once 'DBException.php';
++require_once 'MDB2/TableBrowser/DBException.php';
+ 
+ /**
+  * This class implements the whereClauseGenerator interface
+--- MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/MultipleFliterManager.php~	2010-11-16 15:36:47.000000000 +0200
++++ MDB2_TableBrowser-0.1.2/usr/share/pear/MDB2/TableBrowser/MultipleFliterManager.php	2010-11-16 15:38:16.109279189 +0200
+@@ -13,10 +13,10 @@
+  * @link      http://code.google.com/p/mdb2tablebrowser/source/browse/trunk/MDB2_TableBrowser/TableBrowser/FilterManager.php
+  */
+ 
+-require_once 'Interfaces.php';
++require_once 'MDB2/TableBrowser/Interfaces.php';
+ require_once 'MDB2.php';
+-require_once 'DBException.php';
+-require_once 'FilterManager.php';
++require_once 'MDB2/TableBrowser/DBException.php';
++require_once 'MDB2/TableBrowser/FilterManager.php';
+ 
+ /**
+  * This class implements the MDB2_TableBrowser_InterfaceMultipleWhereClauseGenerator interface
