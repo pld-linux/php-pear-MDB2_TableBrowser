@@ -1,20 +1,19 @@
+%define		status		alpha
+%define		pearname	MDB2_TableBrowser
 %include	/usr/lib/rpm/macros.php
-%define		_status		alpha
-%define		_pearname	MDB2_TableBrowser
-Summary:	%{_pearname} - Database table abstraction library
-Summary(pl.UTF-8):	%{_pearname} - biblioteka abstrakcji tabeli bazy danych
-Name:		php-pear-%{_pearname}
-Version:	0.1.2
-Release:	2
+Summary:	%{pearname} - Database table abstraction library
+Summary(pl.UTF-8):	%{pearname} - biblioteka abstrakcji tabeli bazy danych
+Name:		php-pear-%{pearname}
+Version:	0.1.3
+Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	738fdba9d00476964905333a60223fba
-Patch0:		paths.patch
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	d5fc8947e973dbeb04011cd1d03a8bd2
 URL:		http://pear.php.net/package/MDB2_TableBrowser/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +32,7 @@ Currently only the single table browser is implemented. If you need to
 work with data that spans multiple tables, you can build a table view
 as this library works with them as well.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Obiekty opisujące tabele baz danych pozwalają na obsługę tabel w
@@ -50,11 +49,12 @@ istnieje potrzeba obsługi danych rozrzuconych na kilka tabel,
 konieczne będzie stworzenie widoku, z którym klasa ta współpracuje
 równie dobrze.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
+
+mv .%{php_pear_dir}/data/MDB2_TableBrowser/README .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log
+%doc install.log README
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/MDB2/TableBrowser
 %{php_pear_dir}/MDB2/TableBrowser.php
