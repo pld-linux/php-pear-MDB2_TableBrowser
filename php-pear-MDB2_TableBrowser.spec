@@ -1,6 +1,5 @@
 %define		status		alpha
 %define		pearname	MDB2_TableBrowser
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Database table abstraction library
 Summary(pl.UTF-8):	%{pearname} - biblioteka abstrakcji tabeli bazy danych
 Name:		php-pear-%{pearname}
